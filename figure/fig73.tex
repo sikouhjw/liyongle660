@@ -1,0 +1,14 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+\documentclass[UTF8]{standalone}
+\usepackage{amsmath,newtxmath,esint,ctex,tikz}
+\begin{document}
+\begin{tikzpicture}
+	\draw[domain=0:3.2,smooth,samples=100]  plot[id=1] function{(x*(3-x)**2/9)**0.5};
+	\draw[domain=0:3.2,smooth,samples=100]  plot[id=2] function{-(x*(3-x)**2/9)**0.5};
+	\draw[-latex] (-1,0) -- ++ (5,0) node[below] {$x$};
+	\draw[-latex] (0,-1) -- ++ (0,3) node[right] {$y$};
+	\node[below=5pt,left=-3pt] at (0,0) {$O$};
+	\node[below] at (3,0) {$3$};
+\end{tikzpicture}
+\end{document}

@@ -8,7 +8,7 @@
   Mapping = fullwidth-stop
 ]
 \setmainfont{Source Han Serif CN}
-\usepackage{amsmath,amssymb,graphicx,newtxmath,upgreek,physics,esint}
+\usepackage{amsmath,amssymb,mwe,newtxmath,upgreek,physics,esint,siunitx}
 \everymath{\displaystyle}
 \usepackage{lastpage}
 \usepackage[paperwidth=15cm,paperheight=20cm,left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
@@ -347,5 +347,89 @@ enhanced,colback=white,colframe=white,attach boxed title to top center={yshift=-
 
 \begin{ti}
 	设 $f(x) = \int_0^{x^2} \ee^{-t^2} \dd{t}$，则 $f(x)$ 的极值为 \hua，$f(x)$ 的拐点坐标为 \hua。
+\end{ti}
+
+\begin{ti}
+	定积分 $I = \int_0^\uppi \frac{x \sin x}{1 + \cos^2 x} \dd{x} = $ \hua。
+\end{ti}
+
+\begin{ti}
+	设 $f(x) = \max \bigl\{ 1,x^2 \bigr\}$，则 $\int_1^x f(t) \dd{t} = $ \hua。
+\end{ti}
+
+\begin{ti}
+	在曲线 $y = x^2$ ($0 \leq x \leq 1$) 上取一点 $\bigl( t,t^2 \bigr)$, ($0 < t < 1$)，设 $A_1$ 是曲线 $y = x^2$ ($0 \leq x \leq 1$)，直线 $y = t^2$ 和 $x = 0$ 围成的面积；$A_2$ 是由曲线 $y = x^2$ ($0 \leq x \leq 1$) 直线 $y = t^2$ 和 $x = 1$ 围成的面积，则 $t$ 取 \hua{} 时 $A = A_1 + A_2$ 取最小值。
+\end{ti}
+
+\begin{ti}
+	$\int_1^{+\infty} \frac{\dd{x}}{x \sqrt{2x^2 - 1}} = $ \hua。
+\end{ti}
+
+\begin{ti}
+	$I = \int_1^{+\infty} \biggl[ \frac{2x^2 + bx + a}{x(2x + a)} - 1 \biggr] \dd{x} = 1$，则 $a = $ \hua，$b = $ \hua。
+\end{ti}
+
+\begin{ti}
+	$\int_0^{+\infty} \frac{x \ee^{-x}}{(1 + \ee^{-x})^2} \dd{x} = $ \hua。
+\end{ti}
+
+\begin{ti}
+	摆线 $x = a (t - \sin t)$, $y = a(1 - \cos t)$ ($0 \leq t \leq 2 \uppi$) 与 $x$ 轴围成图形绕 $y = 2a$ 旋转一周而得旋转体的体积 $V = $ \hua。
+\end{ti}
+
+\begin{ti}
+	设星形线方程为
+	\[
+		\begin{cases}
+			x = a \cos^3 t \\
+			y = a \sin^3 t
+		\end{cases}
+	\]
+	则它所围成的面积 $A$ 为 \hua，它的弧长 $L$ 为 \hua，它绕 $x$ 轴旋转而生成的旋转体体积 $V$ 为 \hua，该旋转体的侧面积 $S = $ \hua。
+	\begin{center}
+		\includegraphics{figure/fig71.pdf}
+	\end{center}
+\end{ti}
+
+\begin{ti}
+	设有曲线 $y = \sqrt{x-1}$，过原点作其切线，则以曲线、切线及 $x$ 轴所围成平面图形绕 $x$ 轴旋转一圈所得到的表面积为 \hua。
+\end{ti}
+
+\begin{ti}
+	已知抛物叶形线的一部分：
+	\[
+		y^2 = \frac{x}{9} (3-x)^2 (0 \leq x \leq 3)
+	\]
+	如图所示，它围成的图形为 $M$，则 $M$ 的面积 $A = $ \hua，$M$ 的质心（形心）$(\bar x,\bar y) = $ \hua。
+	\begin{center}
+		\includegraphics{figure/fig73.pdf}
+	\end{center}
+\end{ti}
+
+\begin{ti}
+	在水平放置的椭圆底柱形容器内储存某种液体，容器的尺寸如图所示，其中椭圆方程为 $\frac{x^2}{4} + y^2 = 1$ （单位：\si{m}），则当液面过点 $(0,y)$ ($-1 \leq y \leq 1$) 处水平线时，容器内液体的体积是 \hua，当容器内储满了液体后，以 \SI{0.16}{m^3/min} 的速度将液体从容器顶端抽出，则当液面降至 $y = 0$ 时，液面下降的速度为 \hua，如果液体的密度为 \SI{1000}{kg/m^3}，抽出全部液体所作的功为 \hua。
+	\begin{center}
+		\includegraphics{example-image}
+	\end{center}
+\end{ti}
+
+\begin{ti}
+	设无穷长直线 $L$ 的线密度为 $1$，引力常数为 $k$，则 $L$ 对距直线为 $a$ 的单位质点 $A$ 的引力为 \hua。
+\end{ti}
+
+\begin{ti}
+	已知 $y = y(x)$ 在任意点 $x$ 处的增量 $\Delta y = \frac{y \Delta x}{1 + x^2} + \alpha$，其中 $\alpha$ 是 $\Delta x$ 的高阶无穷小（$\Delta x \to 0$ 时），$y(0) = \uppi$，则 $y(1) = $ \hua。
+\end{ti}
+
+\begin{ti}
+	设 $\alpha > 0$ 是常数，连续函数 $f(x)$ 满足 $\lim_{x \to +\infty} f(x) = b$, $y = y(x)$ 是微分方程
+	\[
+		y' + ay = f(x)
+	\]
+	的解，则 $\lim_{x \to +\infty} y(x) = $ \hua。
+\end{ti}
+
+\begin{ti}
+	若通过点 $(1,0)$ 的曲线 $y = y(x)$ 上每一点 $(x,y)$ 处切线的斜率等于 $1 + \frac{y}{x} + \Bigl( \frac{y}{x} \Bigr)^2$，则此曲线的方程是 \hua。
 \end{ti}
 \end{document}
