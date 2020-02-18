@@ -1,15 +1,34 @@
 \documentclass[zihao=5]{ctexbook}
-\setCJKmainfont{Source Han Serif CN}
+\setCJKmainfont{SourceHanSerifCN}%
 [
-  UprightFont = *-Regular,
-  BoldFont = *-Bold,
-  ItalicFont = *-Regular,
-  BoldItalicFont = *-Bold,
-  Mapping = fullwidth-stop
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = *-Regular,
+	BoldItalicFont = *-Bold,
+	Mapping = fullwidth-stop
+]
+\setCJKsansfont{SourceHanSansCN}%
+[
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = *-Regular,
+	BoldItalicFont = *-Bold,
+	Mapping = fullwidth-stop
+]
+\setCJKmonofont{SourceHanSansCN}%
+[
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = *-Regular,
+	BoldItalicFont = *-Bold,
+	Mapping = fullwidth-stop
 ]
 \setmainfont{Source Han Serif CN}
-\usepackage{amsmath,amssymb,mwe,newtxmath,upgreek,physics,esint,siunitx}
+\usepackage{amsmath,amssymb,mwe}
+\usepackage[upint]{newtxmath}
+\usepackage{upgreek,physics,siunitx}% ,esint
 \everymath{\displaystyle}
+\edef\iint{\iint\limits}
 \usepackage{lastpage}
 \usepackage[paperwidth=15cm,paperheight=20cm,left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
 \setlength{\headheight}{13pt}
@@ -18,30 +37,30 @@
 \usetikzlibrary{shapes,calc}
 \makeatletter
 \newcommand\thumb{%
-  \if@mainmatter
-  \begingroup
-  \catcode`\$=3
-  \tikzpicture[remember picture,overlay] % thumb index
-    \ifodd\value{page}
-      \node[fill=gray,text=black,anchor=north east,xshift=2mm,
-            yshift=-10mm-\arabic{chapter}*20mm,
-            shape=semicircle,shape border rotate=90,
-            minimum height=10mm,minimum width=5mm,
-            font=\normalfont\sffamily\bfseries\Huge]
-        at (current page.north east)
-        {\llap{\arabic{chapter}\hspace{1mm}}};
-    \else
-      \node[fill=gray,text=black,anchor=north west,xshift=-2mm,
-            yshift=-10mm-\arabic{chapter}*20mm,
-            shape=semicircle,shape border rotate=270,
-            minimum height=10mm,minimum width=5mm,
-            font=\normalfont\sffamily\bfseries\Huge]
-        at (current page.north west)
-        {\rlap{\hspace{1mm}\arabic{chapter}}};
-    \fi
-  \endtikzpicture
-  \endgroup
-  \fi}
+	\if@mainmatter
+	\begingroup
+	\catcode`\$=3
+	\tikzpicture[remember picture,overlay] % thumb index
+	\ifodd\value{page}
+	  \node[fill=gray,text=black,anchor=north east,xshift=2mm,
+			yshift=-10mm-\arabic{chapter}*20mm,
+			shape=semicircle,shape border rotate=90,
+			minimum height=10mm,minimum width=5mm,
+			font=\normalfont\sffamily\bfseries\Huge]
+		at (current page.north east)
+		{\llap{\arabic{chapter}\hspace{1mm}}};
+	\else
+	  \node[fill=gray,text=black,anchor=north west,xshift=-2mm,
+			yshift=-10mm-\arabic{chapter}*20mm,
+			shape=semicircle,shape border rotate=270,
+			minimum height=10mm,minimum width=5mm,
+			font=\normalfont\sffamily\bfseries\Huge]
+		at (current page.north west)
+		{\rlap{\hspace{1mm}\arabic{chapter}}};
+	\fi
+	\endtikzpicture
+	\endgroup
+	\fi}
 \makeatother
 
 \usepackage{fancyhdr}
@@ -63,8 +82,14 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{breakable,skins}
 \newtcolorbox[auto counter]{ti}[1][]{%
-enhanced,colback=white,colframe=white,attach boxed title to top center={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2},boxed title style={boxrule=0.5mm,frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west) -- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east) -- (frame.south east) -- (frame.south west) -- cycle; },interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west) -- (interior.north west) -- (interior.north east) -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west) -- cycle;} },fonttitle=\bfseries,breakable = false,title=\thetcbcounter,#1}
-\usepackage{etoolbox}
+enhanced,colback=white,colframe=white,attach boxed title to top center={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2},
+boxed title style={
+boxrule=0.5mm,frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west) -- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east) -- (frame.south east) -- (frame.south west) -- cycle; },
+interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west) -- (interior.north west) -- (interior.north east) -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west) -- cycle;}
+},
+fonttitle=\bfseries,breakable = false,title=\thetcbcounter,#1}
+% \usepackage{etoolbox}
+%% part A
 % \AtEndEnvironment{ti}{\tcblower%
 % \parbox[t]{0.5\textwidth}{
 % \begin{tabular}[c]{@{}|c|@{}}
@@ -83,6 +108,13 @@ enhanced,colback=white,colframe=white,attach boxed title to top center={yshift=-
 % }
 % \\\vspace*{9em}
 % }
+% % part B
+% \AtEndEnvironment{ti}{\tcblower%
+% \parbox[t]{\textwidth}{
+% \hspace*{\fill}
+% \tikz \draw[dashed] (0,0) -- (0,-4);
+% \hspace*{\fill}
+% }}
 \newcommand{\hua}{\CJKunderline*[hidden=true]{瞻彼阕者，虚室生白}}
 \newcommand{\ee}{\mathrm{e}}
 \renewcommand{\leq}{\leqslant}
@@ -98,5 +130,4 @@ enhanced,colback=white,colframe=white,attach boxed title to top center={yshift=-
 \mainmatter
 \part{基础过关\\1 阶}
 \input{src/chap1.tex}
-
 \end{document}
