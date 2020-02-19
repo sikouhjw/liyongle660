@@ -1,9 +1,12 @@
 \documentclass[zihao=5]{ctexbook}
+\setmainfont{SourceSerifPro-Regular}
+\usepackage{sourcesanspro}
+\usepackage{sourcecodepro}
 \setCJKmainfont{SourceHanSerifCN}%
 [
 	UprightFont = *-Regular,
 	BoldFont = *-Bold,
-	ItalicFont = *-Regular,
+	ItalicFont = 方正新楷体简体,
 	BoldItalicFont = *-Bold,
 	Mapping = fullwidth-stop
 ]
@@ -23,14 +26,13 @@
 	BoldItalicFont = *-Bold,
 	Mapping = fullwidth-stop
 ]
-\setmainfont{Source Han Serif CN}
 \usepackage{amsmath,amssymb,mwe}
 \usepackage[upint]{newtxmath}
 \usepackage{upgreek,physics,siunitx}% ,esint
 \everymath{\displaystyle}
 \edef\iint{\iint\limits}
 \usepackage{lastpage}
-\usepackage[paperwidth=15cm,paperheight=20cm,left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[paperwidth=18cm,paperheight=24cm,left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
 \setlength{\headheight}{13pt}
 
 \usepackage{tikz,pgf}
@@ -88,8 +90,8 @@ boxrule=0.5mm,frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west) -- (f
 interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west) -- (interior.north west) -- (interior.north east) -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west) -- cycle;}
 },
 fonttitle=\bfseries,breakable = false,title=\thetcbcounter,#1}
-% \usepackage{etoolbox}
-%% part A
+\usepackage{etoolbox}
+% % part A
 % \AtEndEnvironment{ti}{\tcblower%
 % \parbox[t]{0.5\textwidth}{
 % \begin{tabular}[c]{@{}|c|@{}}
@@ -115,6 +117,10 @@ fonttitle=\bfseries,breakable = false,title=\thetcbcounter,#1}
 % \tikz \draw[dashed] (0,0) -- (0,-4);
 % \hspace*{\fill}
 % }}
+\AtBeginEnvironment{tasks}{\kuo{}}
+\usepackage{tasks}
+\settasks{label=(\Alph*),label-width=15pt,after-item-skip=0pt,debug}
+\newcommand{\kuo}{\mbox{(\hspace{1.5em})}}
 \newcommand{\hua}{\CJKunderline*[hidden=true]{瞻彼阕者，虚室生白}}
 \newcommand{\ee}{\mathrm{e}}
 \renewcommand{\leq}{\leqslant}
