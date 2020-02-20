@@ -1,0 +1,131 @@
+\setmainfont{SourceSerifPro-Regular}
+\usepackage{sourcesanspro}
+\usepackage{sourcecodepro}
+\setCJKmainfont{SourceHanSerifCN}%
+[
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = 方正新楷体简体,
+	BoldItalicFont = *-Bold,
+	Mapping = fullwidth-stop
+]
+\setCJKsansfont{SourceHanSansCN}%
+[
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = *-Regular,
+	BoldItalicFont = *-Bold,
+	Mapping = fullwidth-stop
+]
+\setCJKmonofont{SourceHanSansCN}%
+[
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = *-Regular,
+	BoldItalicFont = *-Bold,
+	Mapping = fullwidth-stop
+]
+\usepackage{amsmath,amssymb,mwe}
+\usepackage[upint]{newtxmath}
+\usepackage{upgreek,physics,siunitx}% ,esint
+\everymath{\displaystyle}
+\edef\iint{\iint\limits}
+\usepackage{lastpage}
+\usepackage[paperwidth=15cm,paperheight=20cm,left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\setlength{\headheight}{13pt}
+
+\usepackage{tikz,pgf}
+\usetikzlibrary{shapes,calc}
+\makeatletter
+\newcommand\thumb{%
+	\if@mainmatter
+	\begingroup
+	\catcode`\$=3
+	\tikzpicture[remember picture,overlay] % thumb index
+	\ifodd\value{page}
+	  \node[fill=gray,text=black,anchor=north east,xshift=2mm,
+			yshift=-10mm-\arabic{chapter}*20mm,
+			shape=semicircle,shape border rotate=90,
+			minimum height=10mm,minimum width=5mm,
+			font=\normalfont\sffamily\bfseries\Huge]
+		at (current page.north east)
+		{\llap{\arabic{chapter}\hspace{1mm}}};
+	\else
+	  \node[fill=gray,text=black,anchor=north west,xshift=-2mm,
+			yshift=-10mm-\arabic{chapter}*20mm,
+			shape=semicircle,shape border rotate=270,
+			minimum height=10mm,minimum width=5mm,
+			font=\normalfont\sffamily\bfseries\Huge]
+		at (current page.north west)
+		{\rlap{\hspace{1mm}\arabic{chapter}}};
+	\fi
+	\endtikzpicture
+	\endgroup
+	\fi}
+\makeatother
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[RE]{\bfseries \leftmark}
+\fancyhead[LO]{\bfseries \rightmark}
+\fancyhead[RO,LE]{\thumb}
+\fancyhead[C]{\bfseries 仅供学习使用，严禁商业使用}
+\fancyfoot[C]{\bfseries --\thepage/\pageref{LastPage}--}
+\fancypagestyle{plain}{%
+\fancyhf{}
+\fancyhead[r]{\thumb}
+\fancyfoot[C]{\bfseries --\thepage/\pageref{LastPage}--}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\newtcolorbox[auto counter]{ti}[1][]{%
+enhanced,colback=white,colframe=white,attach boxed title to top center={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2},
+boxed title style={
+boxrule=0.5mm,frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west) -- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east) -- (frame.south east) -- (frame.south west) -- cycle; },
+interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west) -- (interior.north west) -- (interior.north east) -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west) -- cycle;}
+},
+fonttitle=\bfseries,breakable = false,title=\thetcbcounter,#1}
+\usepackage{etoolbox}
+% % part A
+% \AtEndEnvironment{ti}{\tcblower%
+% \parbox[t]{0.5\textwidth}{
+% \begin{tabular}[c]{@{}|c|@{}}
+% 	\hline
+% 	答题\\
+% 	区域\\
+% 	\hline
+% \end{tabular}}%
+% \parbox[t]{0.5\textwidth}{%
+% \begin{tabular}[c]{@{}|c|@{}}
+% 	\hline
+% 	纠错\\
+% 	笔记\\
+% 	\hline
+% \end{tabular}
+% }
+% \\\vspace*{9em}
+% }
+% % part B
+% \AtEndEnvironment{ti}{\tcblower%
+% \parbox[t]{\textwidth}{
+% \hspace*{\fill}
+% \tikz \draw[dashed] (0,0) -- (0,-4);
+% \hspace*{\fill}
+% }}
+\AtBeginEnvironment{tasks}{\kuo{}}
+\usepackage{tasks}
+\settasks{label=(\Alph*),label-width=15pt,after-item-skip=0pt}
+\usepackage{hyperref}
+\newcommand{\kuo}{\mbox{(\hspace{1.5em})}}
+\newcommand{\hua}{\CJKunderline*[hidden=true]{瞻彼阕者，虚室生白}}
+\newcommand{\ee}{\mathrm{e}}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\partial}{\uppartial}
+\title{2021 李永乐·王式安考研数学系列\\数学基础过关 660 题 数学一习题册\thanks{Build time：\today}}
+\author{李永乐\thanks{清华大学} \and 王式安\thanks{北京理工大学} \and 武忠祥\thanks{西安交通大学}}
+\date{2019 年 9 月}
