@@ -1,12 +1,12 @@
 \section{选择题}
 \begin{ti}
 	设有下列命题
-	\begin{tasks}[label=(\arabic*)]
-		\task 数列 $\{ x_n \}$ 收敛（即 $\exists$ 极限 $\lim_{n \to \infty} x_n$），则 $x_n$ 有界。
-		\task 数列极限 $\lim_{n \to \infty} x_n = a \Leftrightarrow \lim_{n \to \infty} x_{n+l} = a$。其中 $l$ 为某个确定的正整数。
-		\task 数列 $\lim_{n \to \infty} x_n = a \Leftrightarrow \lim_{n \to \infty} x_{2n-1} = \lim_{n \to \infty} x_{2n} = a$。
-		\task 数列极限 $\lim_{n \to \infty} x_n \exists \Leftrightarrow \lim_{n \to \infty} \frac{x_{n+1}}{x_n} = 1$。
-	\end{tasks}
+	\begin{enumerate}
+		\item 数列 $\{ x_n \}$ 收敛（即 $\exists$ 极限 $\lim_{n \to \infty} x_n$），则 $x_n$ 有界。
+		\item 数列极限 $\lim_{n \to \infty} x_n = a \Leftrightarrow \lim_{n \to \infty} x_{n+l} = a$。其中 $l$ 为某个确定的正整数。
+		\item 数列 $\lim_{n \to \infty} x_n = a \Leftrightarrow \lim_{n \to \infty} x_{2n-1} = \lim_{n \to \infty} x_{2n} = a$。
+		\item 数列极限 $\lim_{n \to \infty} x_n \exists \Leftrightarrow \lim_{n \to \infty} \frac{x_{n+1}}{x_n} = 1$。
+	\end{enumerate}
 	则以上命题中正确的个数是
 	\begin{tasks}(4)
 		\task 1。
@@ -28,12 +28,12 @@
 
 \begin{ti}
 	有以下命题：设 $\lim_{x \to a} f(x) = A$, $\lim_{x \to a} g(x)$ 不 $\exists$, $\lim_{x \to a} h(x)$ 不 $\exists$，
-	\begin{tasks}[label=(\arabic*)](2)
-		\task $\lim_{x \to a} (f(x) \cdot g(x))$ 不 $\exists$。
-		\task $\lim_{x \to a} (g(x) + h(x))$ 不 $\exists$。
-		\task $\lim_{x \to a} (h(x) \cdot g(x))$ 不 $\exists$。
-		\task $\lim_{x \to a} (g(x) + f(x))$ 不 $\exists$。
-	\end{tasks}
+	\begin{enumerate}
+		\item $\lim_{x \to a} (f(x) \cdot g(x))$ 不 $\exists$。
+		\item $\lim_{x \to a} (g(x) + h(x))$ 不 $\exists$。
+		\item $\lim_{x \to a} (h(x) \cdot g(x))$ 不 $\exists$。
+		\item $\lim_{x \to a} (g(x) + f(x))$ 不 $\exists$。
+	\end{enumerate}
 	则以上命题中正确的个数是
 	\begin{tasks}(4)
 		\task 0。
@@ -160,5 +160,198 @@
 		\task $35$。
 		\task $36$。
 		\task $\infty$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	下列各题计算过程中正确无误的是
+	\begin{tasks}
+		\task 数列极限 $\lim_{n \to \infty} \frac{\ln n}{n} = \lim_{n \to \infty} \frac{(\ln n)'}{n'} = \lim_{n \to \infty} \frac{1}{n} = 0$。
+		\task $\lim_{x \to 1} \frac{\sin \uppi x}{3x^2 - 2x - 1} = \lim_{x \to 1} \frac{\uppi \cos \uppi x}{6x - 2} = \lim_{x \to 1} \frac{-\uppi^2 \sin \uppi x}{6} = 0$。
+		\task $\lim_{x \to 0} \frac{x^2 \sin \frac{1}{x}}{\sin x} = \lim_{x \to 0} \frac{2x \sin \frac{1}{x} - \cos \frac{1}{x}}{\cos x}$ 不存在。
+		\task $\lim_{x \to 0} \frac{x + \sin x}{x - \sin x} = \lim_{x \to 0} \frac{1 + \cos x}{1 - \cos x} = \infty$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	当 $n \to \infty$ 时，数列 $\biggl( 1 + \frac{1}{n} \biggr)^n - \ee$ 是 $\frac1n$ 的
+	\begin{tasks}(2)
+		\task 高阶无穷小。
+		\task 低阶无穷小。
+		\task 等价无穷小。
+		\task 同阶但非等价无穷小。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	当 $x \to 0$ 时下列无穷小中阶数最高的是
+	\begin{tasks}(2)
+		\task $(1 + x)^{x^2} - 1$。
+		\task $\ee^{x^4-2x} - 1$。
+		\task $\int_0^{x^2} \sin t^2 \dd{t}$。
+		\task $\sqrt{1+2x} - \sqrt[3]{1+3x}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $x \to a$ 时 $f(x)$ 与 $g(x)$ 分别是 $x-a$ 的 $n$ 阶与 $m$ 阶无穷小，则下列命题
+	\begin{enumerate}
+		\item $f(x) g(x)$ 是 $x-a$ 的 $n+m$ 阶无穷小。
+		\item 若 $n > m$，则 $\frac{f(x)}{g(x)}$ 是 $x-a$ 的 $n-m$ 阶无穷小。
+		\item 若 $n \leq m$，则 $f(x) + g(x)$ 是 $x-a$ 的 $n$ 阶无穷小。
+		\item 若 $f(x)$ 连续，则 $\int_a^x f(t) \dd{t}$ 是 $x-a$ 的 $n+1$ 阶无穷小。
+	\end{enumerate}
+	中，正确的个数是
+	\begin{tasks}(4)
+		\task 1。
+		\task 2。
+		\task 3。
+		\task 4。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x) = \int_0^x t \ee^{\sin t} \dd{t}$，则当 $x \to 0$ 时，$f(x)$ 为无穷小 $x$ 的阶为
+	\begin{tasks}(4)
+		\task 1 阶。
+		\task 2 阶。
+		\task 3 阶。
+		\task 4 阶。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	以下函数 $f(g(x))$ 以 $x=0$ 为第二类间断点的是
+	\begin{tasks}
+		\task $f(u) = \ln(1+u^2)$, $g(u) = \begin{cases}
+			\sin^2x + (x+1)^2, & x \leq 0, \\
+			x^2+1, & x > 0.
+		\end{cases}$
+		\task $f(u) = \begin{cases}
+			1-u, & u \leq 0 \\
+			u^2 + 1, & u > 0
+		\end{cases}$, $g(x) = 2\cos x-1$。
+		\task $f(u) = \begin{cases}
+			\frac{\ln(1-u^2)}{u} \sin\frac{1}{u}, & u < 0 \\
+			1 - \cos\sqrt{u}, & u \geq 0
+		\end{cases}$, $g(x) = \begin{cases}
+			x, & x < 0, \\
+			x + \frac{\uppi^2}{4}, & x \geq 0.
+		\end{cases}$
+		\task $f(u) = \ee^{u^2} + 1$, $g(x) = \begin{cases}
+			\frac{1}{x}, & x < 0, \\
+			0, & x = 0, \\
+			\sin\frac{1}{x}, & x > 0.
+		\end{cases}$
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x) = \frac{1}{\arctan\frac{x-1}{x}}$ 则
+	\begin{tasks}
+		\task $x=0$ 与 $x=1$ 都是 $f(x)$ 的第一类间断点。
+		\task $x=0$ 与 $x=1$ 都是 $f(x)$ 的第二类间断点。
+		\task $x=0$ 是 $f(x)$ 的第一类间断点，$x=1$ 是 $f(x)$ 的第二类间断点。
+		\task $x=0$ 是 $f(x)$ 的第二类间断点，$x=1$ 是 $f(x)$ 的第一类间断点。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x)$ 在点 $x_0$ 的某邻域内有定义，且 $f(x)$ 在 $x_0$ 间断，则在点 $x_0$ 处必定间断的函数是
+	\begin{tasks}(4)
+		\task $f(x) \sin x$。
+		\task $f(x) + \sin x$。
+		\task $f^2(x)$。
+		\task $|f(x)|$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	“$f(x)$ 在 $x_0$ 点连续”是 $|f(x)|$ 在 $x_0$ 点连续的
+	\begin{tasks}(2)
+		\task 充分条件，但不是必要条件。
+		\task 必要条件，但不是充分条件。
+		\task 充分必要条件。
+		\task 既不是充分，也不是必要条件.
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x)$ 在 $[a,+\infty)$ 连续，则“$\exists x_n \in [a,+\infty)$ 有 $\lim_{n \to \infty}x_n = +\infty$ 且 $\lim_{n \to \infty}f(x_n) = \infty$”是 $f(x)$ 在 $[a,+\infty)$ 无界的
+	\begin{tasks}(2)
+		\task 充分非必要条件。
+		\task 必要非充分条件。
+		\task 充要条件。
+		\task 既非充分又非必要条件。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x) = \begin{cases}
+		\frac{1-\cos x^2}{x^3}, & x > 0 \\
+		g(x) \arcsin^2x, & x \leq 0
+	\end{cases}$，其中 $g(x)$ 是有界函数，则 $f(x)$ 在 $x=0$ 处
+	\begin{tasks}(2)
+		\task 极限不存在。
+		\task 极限存在，但不连续。
+		\task 连续，但不可导。
+		\task 可导。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x) = \begin{cases}
+		\ee^{\frac{1}{x^2-1}}, & |x|<1 \\
+		x^4 - bx^2 + c, & |x| \geq 1
+	\end{cases}$ 可导，则 $(b,c) = $
+	\begin{tasks}(4)
+		\task $(2,1)$。
+		\task $(1,0)$。
+		\task $\biggl(\frac{1}{2},-\frac{1}{2}\biggr)$。
+		\task $(3,2)$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	下列函数 $f(x)$ 中，导函数 $f'(x)$ 在 $x=0$ 处不连续的是
+	\begin{tasks}(2)
+		\task $f(x) = \begin{cases}
+			x^{\frac43} \sin \frac{1}{x}, & x \ne 0 \\
+			0, & x = 0
+		\end{cases}$。
+		\task $f(x) = \begin{cases}
+			\frac{\sin x}{x}, & x \ne 0 \\
+			1, & x = 0
+		\end{cases}$。
+		\task $f(x) = \begin{cases}
+			\frac{\ee^x-1}{x}, & x \ne 0 \\
+			1, & x = 0
+		\end{cases}$。
+		\task $f(x) = \begin{cases}
+			\frac{\ln(1+x)}{x}, & x \ne 0 \\
+			1, & x = 0
+		\end{cases}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(0) = 0$，则 $\lim_{x \to 0} \frac{f\bigl(x^2\bigr)}{x^2}$ 存在是 $f(x)$ 在 $x=0$ 可导的
+	\begin{tasks}(2)
+		\task 充分非必要条件。
+		\task 必要非充分条件。
+		\task 充分必要条件。
+		\task 既非充分又非必要条件。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x)$ 是以 $3$ 为周期的可导函数且 $f'(4) = 1$，则
+	\[\lim_{h \to 0} \frac{f(1+h) - f(1-3\tan h)}{h}\]
+	等于
+	\begin{tasks}(4)
+		\task $5$。
+		\task $3$。
+		\task $4$。
+		\task $7$。
 	\end{tasks}
 \end{ti}

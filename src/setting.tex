@@ -1,4 +1,4 @@
-\setmainfont{SourceSerifPro-Regular}
+\usepackage{newtxtext}
 \usepackage{sourcesanspro}
 \usepackage{sourcecodepro}
 \setCJKmainfont{SourceHanSerifCN}%
@@ -119,6 +119,10 @@ fonttitle=\bfseries,breakable = false,title=\thetcbcounter,#1}
 \AtBeginEnvironment{tasks}{\kuo{}}
 \usepackage{tasks}
 \settasks{label=(\Alph*),label-width=15pt,after-item-skip=0pt}
+\usepackage{enumitem}
+\def\theenumi{\arabic{enumi}}
+\def\labelenumi{(\theenumi)}
+\setlist{parsep=0pt,itemsep=0pt,partopsep=0pt}
 \usepackage{hyperref}
 \newcommand{\kuo}{\mbox{(\hspace{1.5em})}}
 \newcommand{\hua}{\CJKunderline*[hidden=true]{瞻彼阕者，虚室生白}}
