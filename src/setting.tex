@@ -88,7 +88,7 @@ boxed title style={
 boxrule=0.5mm,frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west) -- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east) -- (frame.south east) -- (frame.south west) -- cycle; },
 interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west) -- (interior.north west) -- (interior.north east) -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west) -- cycle;}
 },
-fonttitle=\bfseries,breakable = false,title=\thetcbcounter,#1}
+fonttitle=\bfseries,breakable = true,title=\thetcbcounter,#1}
 \usepackage{etoolbox}
 % % part A
 % \AtEndEnvironment{ti}{\tcblower%
