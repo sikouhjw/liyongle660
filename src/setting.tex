@@ -27,7 +27,7 @@
 ]
 \usepackage{amsmath,amssymb,mwe}
 \usepackage[upint]{newtxmath}
-\usepackage{upgreek,physics,siunitx}% ,esint
+\usepackage{upgreek,physics,siunitx,varwidth}% ,esint
 \everymath{\displaystyle}
 \edef\iint{\iint\limits}
 \usepackage{lastpage}
@@ -123,9 +123,10 @@ fonttitle=\bfseries,breakable = true,title=\thetcbcounter,#1}
 \def\theenumi{\arabic{enumi}}
 \def\labelenumi{(\theenumi)}
 \setlist{parsep=0pt,itemsep=0pt,partopsep=0pt}
-\usepackage{hyperref}
+\usepackage[linktocpage=true,colorlinks=true,allcolors=magenta]{hyperref}
 \newcommand{\kuo}{\mbox{(\hspace{1.5em})}}
 \newcommand{\hua}{\CJKunderline*[hidden=true]{瞻彼阕者，虚室生白}}
+\DeclareMathOperator{\sgn}{sgn}
 \newcommand{\ee}{\mathrm{e}}
 \renewcommand{\leq}{\leqslant}
 \renewcommand{\geq}{\geqslant}
