@@ -25,7 +25,7 @@
 	BoldItalicFont = *-Bold,
 	Mapping = fullwidth-stop
 ]
-\usepackage{amsmath,amssymb,mwe}
+\usepackage{amsmath,amssymb,mwe,pifont}
 \usepackage[upint]{newtxmath}
 \usepackage{upgreek,physics,siunitx,varwidth}% ,esint
 \everymath{\displaystyle}
@@ -120,8 +120,8 @@ fonttitle=\bfseries,breakable = true,title=\thetcbcounter,#1}
 \usepackage{tasks}
 \settasks{label=(\Alph*),label-width=15pt,after-item-skip=0pt}
 \usepackage{enumitem}
-\def\theenumi{\arabic{enumi}}
-\def\labelenumi{(\theenumi)}
+\def\theenumi{\ding{\numexpr171+\value{enumi}}}
+\def\labelenumi{\theenumi}
 \setlist{parsep=0pt,itemsep=0pt,partopsep=0pt}
 \usepackage[linktocpage=true,colorlinks=true,allcolors=magenta]{hyperref}
 \newcommand{\kuo}{\mbox{(\hspace{1.5em})}}
