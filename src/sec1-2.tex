@@ -754,3 +754,169 @@
 		\task $I_1 < I_2 < 1$。
 	\end{tasks}
 \end{ti}
+
+\begin{ti}
+	下列用牛顿——莱布尼兹公式计算定积分的做法中，错误的做法一共有
+	\begin{enumerate}
+		\item $\int_0^\uppi \sqrt{\sin^3x - \sin^5x} \dd{x} = \int_0^\uppi \sin^{\frac{3}{2}}x \cos x \dd{x} = \frac{2}{5} \sin^{\frac{5}{2}}x \biggr|_0^\uppi = 0$。
+		\item $\int_{-1}^1 \frac{\dd{x}}{x} = \ln|x| \bigr|_{-1}^1 = 0$。
+		\item $\int_0^\uppi \frac{\sec^2x}{2 + \tan^2x} \dd{x} = \frac{1}{\sqrt{2}} \arctan \frac{\tan x}{\sqrt{2}} \biggr|_0^\uppi = 0$。
+		\item $\int_{-1}^1 \frac{\dd}{\dd{x}} \biggl( \arctan \frac{1}{x} \biggr) \dd{x} = \arctan \frac{1}{x} \biggr|_{-1}^1 = \frac{\uppi}{2}$。
+	\end{enumerate}
+	\begin{tasks}(4)
+		\task $1$ 个。
+		\task $2$ 个。
+		\task $3$ 个。
+		\task $4$ 个。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	$I = \int_0^\uppi x \sqrt{\cos^2x - \cos^4x} \dd{x} = $
+	\begin{tasks}(4)
+		\task $\uppi$。
+		\task $\frac{\uppi}{2}$。
+		\task $\frac{\uppi}{3}$。
+		\task $\frac{\uppi}{4}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	$I = \int_0^1 \frac{x}{\sqrt{x(1-x)}} \dd{x} = $
+	\begin{tasks}(4)
+		\task $\uppi$。
+		\task $\frac{\uppi}{2}$。
+		\task $\frac{\uppi}{4}$。
+		\task $\frac{\uppi}{8}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	积分 $I = \int_0^1 \frac{x^4}{\sqrt{1-x}} \dd{x} = $
+	\begin{tasks}(4)
+		\task $\frac{156}{315}$。
+		\task $\frac{256}{315}$。
+		\task $\frac{198}{315}$。
+		\task $\frac{208}{315}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $n$, $m$ 为非负整数 $I_{n,m} = \int_0^1 x^n \ln^m x \dd{x}$ 是
+	\begin{tasks}(2)
+		\task 定积分且值为 $\frac{(-1)^n n!}{(n+1)^m}$。
+		\task 定积分且值为 $\frac{(-1)^m m!}{(n+1)^{m+1}}$。
+		\task 反常积分且发散。
+		\task 反常积分且值为 $\frac{(-1)^m m!}{(n+1)^{m+1}}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $\sin x \ln|x|$ 是 $f(x)$ 的一个原函数，则不定积分 $\int x f'(x) \dd{x} = $
+	\begin{tasks}
+		\task $x \cos x \ln|x| + x \cdot \frac{\sin x}{|x|} - \sin x \ln|x| + C$。
+		\task $x \cos x \ln|x| + \sin x - \sin x \ln|x| + C$。
+		\task $\cos x \ln|x| - \frac{\sin x}{|x|} - \sin x \ln|x| + C$。
+		\task 以上均不正确。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	$\frac{\dd}{\dd{x}} \int_{\cos^2x}^{2x^3} \frac{1}{\sqrt{1+t^2}} \dd{t} = $
+	\begin{tasks}(2)
+		\task $\frac{1}{\sqrt{1+4x^6}} - \frac{1}{\sqrt{1+\cos^4x}}$。
+		\task $\frac{6x^2}{\sqrt{1+4x^6}} - \frac{\sin 2x}{\sqrt{1+\cos^4x}}$。
+		\task $\frac{6x^2}{\sqrt{1+4x^6}} + \frac{\sin 2x}{\sqrt{1+\cos^4x}}$。
+		\task $\frac{6x^2}{\sqrt{1+4x^6}} - \frac{1}{\sqrt{1+\cos^4x}}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $F(x) = \int_0^x \biggl( \int_0^{u^2} \ln \bigl( 1 + t^2 \bigr) \dd{t} \biggr) \dd{u}$，则曲线 $y = F(x)$
+	\begin{tasks}
+		\task 在 $(-\infty,0)$ 是凹的，在 $(0,+\infty)$ 是凸的。
+		\task 在 $(-\infty,0)$ 是凸的，在 $(0,+\infty)$ 是凹的。
+		\task 在 $(-\infty,+\infty)$ 是凹的。
+		\task 在 $(-\infty,+\infty)$ 是凸的。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x) = \begin{cases}
+		\sqrt{4+x}, & x > 0 \\
+		0, & x = 0 \\
+		\sqrt{1-x}, & x < 0
+	\end{cases}$, $F(x) = \int_0^x f(t) \dd{t}$，则
+	\begin{tasks}
+		\task $F(x)$ 在 $x=0$ 点不连续。
+		\task $F(x)$ 在 $x=0$ 点不可导。
+		\task $F(x)$ 在 $x=0$ 点可导，$F'(0) = f(0)$。
+		\task $F(x)$ 在 $x=0$ 点可导，但 $F'(0) =\ne f(0)$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	下列叙述错误的是
+	\begin{tasks}
+		\task 设 $f(x)$ 在 $[-a,a]$ 连续为奇函数，则 $f(x)$ 在 $[-a,a]$ 的全体原函数为偶函数。
+		\task 设 $f(x)$ 在 $[-a,a]$ 连续为偶函数，则 $f(x)$ 在 $[-a,a]$ 的全体原函数为奇函数。
+		\task 设 $f(x)$ 在 $(-\infty,+\infty)$ 连续，以 $T$ 为周期且为奇函数，则 $\int_0^x f(t) \dd{t}$ 也是以 $T$ 为周期的函数。
+		\task 设 $f(x)$ 在 $(-\infty,+\infty)$ 连续，以 $T$ 为周期，又 $\int_0^{+\infty} f(x) \dd{x}$ 收敛，则 $\int_0^x f(t) \dd{t}$ 也是以 $T$ 为周期的函数。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x)$ 为以 $T$ 为周期的非零连续函数，$\varPhi(x) = \int_a^x [f(t) - f(-t)] \dd{t}$, $a$ 是常数，则
+	\begin{tasks}
+		\task $\varPhi(x)$ 是以 $T$ 为周期的偶函数。
+		\task $\varPhi(x)$ 是以 $T$ 为周期的奇函数。
+		\task $\varPhi(x)$ 是偶函数，但不一定以 $T$ 为周期。
+		\task $\varPhi(x)$ 是奇函数，但不一定以 $T$ 为周期。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	函数 $F(x) = \int_x^{x+\uppi} \ln(1+\cos^2t) \cos 2t \dd{t}$
+	\begin{tasks}(4)
+		\task 为正数。
+		\task 为负数。
+		\task 恒为零。
+		\task 不是常数。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x)$ 为连续函数，$\int_0^{\frac{\uppi}{2}} f(x \cos x) \cos x \dd{x} = A$，则 $\int_0^{\frac{\uppi}{2}} f(x \cos x) x \sin x \dd{x} = $
+	\begin{tasks}(4)
+		\task $0$。
+		\task $A$。
+		\task $-A$。
+		\task $2A$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设 $f(x) = \begin{cases}
+		x^2, & x \geq 0 \\
+		\cos x, & x < 0
+	\end{cases}$, $g(x) = \begin{cases}
+		x \sin \frac{1}{x}, & x \ne 0 \\
+		0, & x = 0
+	\end{cases}$，则在区间 $(-1,1)$ 上
+	\begin{tasks}
+		\task $f(x)$ 与 $g(x)$ 都存在原函数。
+		\task $f(x)$ 与 $g(x)$ 都不存在原函数。
+		\task $f(x)$ 存在原函数，$g(x)$ 不存在原函数。
+		\task $f(x)$ 不存在原函数，$g(x)$ 存在原函数。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	数列极限 $\lim_{n \to \infty} \biggl( \frac{n}{n^2+1^2} + \frac{n}{n^2+2^2} + \cdots + \frac{n}{n^2+n^2} \biggr) = $
+	\begin{tasks}(4)
+		\task $\frac{\uppi}{2}$。
+		\task $\frac{\uppi}{4}$。
+		\task $\frac{\uppi}{3}$。
+		\task $\frac{\uppi}{6}$。
+	\end{tasks}
+\end{ti}
