@@ -1,0 +1,15 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+\documentclass[UTF8]{standalone}
+\usepackage{amsmath,newtxmath,ctex,tikz}
+\begin{document}
+\begin{tikzpicture}
+	\draw[domain=0:2,smooth,samples=200]  plot[id=1] function{1-(x-1)**2};
+	\draw[-latex] (-1,0) -- ++ (4,0) node[below] {$x$};
+	\draw[-latex] (0,-1) -- ++ (0,2.5) node[right] {$y$};
+	\node[below=5pt,left=-3pt] at (0,0) {$O$};
+	\draw[dashed] (0,1) node[left] {$1$} -- ++(1,0) -- ++ (0,-1) node[below] {$1$};
+	\node[below] at (2,0) {$2$};
+	\node[right=35pt,above=-2pt] at (1,1) {$y=1-(x-1)^2$};
+\end{tikzpicture}
+\end{document}

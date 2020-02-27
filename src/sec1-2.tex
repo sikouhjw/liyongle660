@@ -670,10 +670,10 @@
 	\end{enumerate}
 	我们可知
 	\begin{tasks}(2)
-		\task 只有 \eqref{179-1}, \eqref{179-2} 正确。
-		\task 只有 \eqref{179-2}, \eqref{179-3} 正确。
-		\task 只有 \eqref{179-2}, \eqref{179-4} 正确。
-		\task 只有 \eqref{179-3}, \eqref{179-4} 正确。
+		\task 只有 \ref{179-1}, \ref{179-2} 正确。
+		\task 只有 \ref{179-2}, \ref{179-3} 正确。
+		\task 只有 \ref{179-2}, \ref{179-4} 正确。
+		\task 只有 \ref{179-3}, \ref{179-4} 正确。
 	\end{tasks}
 \end{ti}
 
@@ -919,4 +919,77 @@
 		\task $\frac{\uppi}{3}$。
 		\task $\frac{\uppi}{6}$。
 	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	数列极限 $\lim_{n \to \infty} \frac{\int_0^{n\uppi} |\sin x| \dd{x}}{(n+1)\uppi} = $
+	\begin{tasks}(4)
+		\task $0$。
+		\task 不存在。
+		\task $\frac{2}{\uppi}$。
+		\task $\frac{1}{\uppi}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	下列反常积分发散的是
+	\begin{tasks}(2)
+		\task $\int_{-1}^1 \frac{1}{\sin x} \dd{x}$。
+		\task $\int_{-1}^1 \frac{1}{\sqrt{1-x^2}} \dd{x}$。
+		\task $\int_0^{+\infty} \ee^{-x^2} \dd{x}$。
+		\task $\int_2^{+\infty} \frac{1}{x \ln^2x} \dd{x}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	下列反常积分收敛的是
+	\begin{tasks}(2)
+		\task $\int_1^{+\infty} \frac{\dd{x}}{\sqrt{x^2-1}}$。
+		\task $\int_1^{+\infty} \frac{\dd{x}}{\sqrt{x(x-1)}}$。
+		\task $\int_1^{+\infty} \frac{\dd{x}}{x^2 \sqrt{x^2-1}}$。
+		\task $\int_1^{+\infty} \frac{\dd{x}}{x(x^2-1)}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	设有下列命题
+	\begin{enumerate}
+		\item 设 $f(x)$ 在 $(-\infty,+\infty)$ 连续是奇函数，则 $\int_{-\infty}^{+\infty} f(x) \dd{x} = 0$。
+		\item 设 $f(x)$ 在 $(-\infty,+\infty)$ 连续，又 $\lim_{R \to +\infty}\int_{-R}^{R} f(x) \dd{x}$ 存在，则 $\int_{-\infty}^{+\infty} f(x) \dd{x}$ 收敛。
+		\item $\int_{a}^{+\infty} f(x) \dd{x}$, $\int_{a}^{+\infty} g(x) \dd{x}$ 均发散，则 $\int_{a}^{+\infty} [f(x) + g(x)] \dd{x}$ 可能发散，也可能收敛。
+		\item 若 $\int_{-\infty}^0 f(x) \dd{x}$ 与 $\int_0^{+\infty} f(x) \dd{x}$ 均发散，则不能确定 $\int_{-\infty}^{+\infty} f(x) \dd{x}$ 是否收敛。
+	\end{enumerate}
+	则以上命题中正确的个数是
+	\begin{tasks}(4)
+		\task $1$。
+		\task $2$。
+		\task $3$。
+		\task $4$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	曲线 $y = \cos x$ $\biggl(x \in \biggl[ 0,\frac{\uppi}{2} \biggr]\biggr)$ 与 $x$ 轴，$y$ 轴所围面积被曲线 $y = a \sin x$ 等分，则 $a = $
+	\begin{tasks}(4)
+		\task $\frac{2}{5}$。
+		\task $\frac{3}{5}$。
+		\task $\frac{3}{4}$。
+		\task $\frac{1}{2}$。
+	\end{tasks}
+\end{ti}
+
+\begin{ti}
+	由曲线 $y = 1 - (x-1)^2$ 及直线 $y=0$ 围成图形绕 $y$ 轴旋转而成立体的体积\vspace{-8bp}\newline%
+	\parbox[t]{0.61\textwidth}{\vspace{0pt}%
+	 $V$ 是
+	\begin{tasks}
+		\task $\int_0^1 \uppi \bigl( 1 + \sqrt{1+y} \bigr)^2 \dd{y}$。
+		\task $\int_0^1 \uppi \bigl( 1 - \sqrt{1-y} \bigr)^2 \dd{y}$。
+		\task $\int_0^1 \uppi \bigl[ \bigl(1 + \sqrt{1-y}\bigr) - \bigl( 1 - \sqrt{1-y} \bigr) \bigr]^2 \dd{y}$。
+		\task $\int_0^1 \uppi \Bigl[ \bigl(1 + \sqrt{1-y}\bigr)^2 - \bigl( 1 - \sqrt{1-y} \bigr)^2 \Bigr] \dd{y}$。
+	\end{tasks}
+	}%
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}\includegraphics{figure/fig206.pdf}
+	\end{varwidth}
 \end{ti}
